@@ -11,16 +11,16 @@ import UIKit
 
 class MonthVC: UIViewController
 {
-    required init(coder aDecoder: NSCoder) {
-        calendar = JTCalendar()
-        super.init(coder: aDecoder)
-    }
+//    required init(coder aDecoder: NSCoder) {
+//        calendar = JTCalendar()
+//        super.init(coder: aDecoder)
+//    }
     
-    @IBOutlet weak var calendarMenuView: JTCalendarMenuView!
-    @IBOutlet weak var calendarContentView: JTCalendarContentView!
-    var calendar : JTCalendar
+//    @IBOutlet weak var calendarMenuView: JTCalendarMenuView!
+//    @IBOutlet weak var calendarContentView: JTCalendarContentView!
+//    var calendar : JTCalendar
     
     override func viewDidLoad() {
-        self.calendar = JTCalendar()
+//        self.calendar = JTCalendar()
     }
 }

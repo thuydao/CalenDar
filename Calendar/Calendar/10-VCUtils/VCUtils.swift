@@ -8,6 +8,7 @@
 
 import UIKit
 
+//$(SRCROOT)
 
 extension UIViewController
 {
@@ -62,4 +63,14 @@ extension UIViewController
     }
     
     //////////// END Flow ////////////////
+    
+    
+    //////////// View ////////////////
+    
+    func td_getViewFormNib(nameNib : String, index : Int)->AnyObject
+    {
+       return NSBundle.mainBundle().loadNibNamed(nameNib, owner: self, options: nil)[index]
+    }
+    
+    //////////// End View ////////////////
 }

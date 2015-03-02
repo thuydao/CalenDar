@@ -10,17 +10,11 @@
 		99BA96991AA42033000F9591 /* TDSplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96981AA42033000F9591 /* TDSplashScreenVC.swift */; };
 		99BA969E1AA421E7000F9591 /* VCUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA969D1AA421E7000F9591 /* VCUtils.swift */; };
 		99BA96A11AA43CDA000F9591 /* MonthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96A01AA43CDA000F9591 /* MonthVC.swift */; };
-		99BA96BB1AA44240000F9591 /* JTCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96A51AA44240000F9591 /* JTCalendar.m */; };
-		99BA96BC1AA44240000F9591 /* JTCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96A71AA44240000F9591 /* JTCalendarAppearance.m */; };
-		99BA96BD1AA44240000F9591 /* JTCalendarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96A91AA44240000F9591 /* JTCalendarContentView.m */; };
-		99BA96BE1AA44240000F9591 /* JTCalendarDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96AB1AA44240000F9591 /* JTCalendarDataCache.m */; };
-		99BA96BF1AA44240000F9591 /* JTCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96AD1AA44240000F9591 /* JTCalendarDayView.m */; };
-		99BA96C01AA44240000F9591 /* JTCalendarMenuMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96AF1AA44240000F9591 /* JTCalendarMenuMonthView.m */; };
-		99BA96C11AA44240000F9591 /* JTCalendarMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96B11AA44240000F9591 /* JTCalendarMenuView.m */; };
-		99BA96C21AA44240000F9591 /* JTCalendarMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96B31AA44240000F9591 /* JTCalendarMonthView.m */; };
-		99BA96C31AA44240000F9591 /* JTCalendarMonthWeekDaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96B51AA44240000F9591 /* JTCalendarMonthWeekDaysView.m */; };
-		99BA96C41AA44240000F9591 /* JTCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96B81AA44240000F9591 /* JTCalendarWeekView.m */; };
-		99BA96C51AA44240000F9591 /* JTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96BA1AA44240000F9591 /* JTCircleView.m */; };
+		99BA96DC1AA479AF000F9591 /* TDCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99BA96DB1AA479AF000F9591 /* TDCalendar.xib */; };
+		99BA96DE1AA479BA000F9591 /* TDCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96DD1AA479BA000F9591 /* TDCalendar.swift */; };
+		99BA96E01AA47ADE000F9591 /* TDMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96DF1AA47ADE000F9591 /* TDMonthView.swift */; };
+		99BA96E31AA47B12000F9591 /* TDMonthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99BA96E21AA47B12000F9591 /* TDMonthView.xib */; };
+		99BA96E51AA47DEC000F9591 /* TDCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96E41AA47DEC000F9591 /* TDCalendarVC.swift */; };
 		99EC87C51AA2090C00050AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EC87C31AA2090C00050AC6 /* Main.storyboard */; };
 		99EC87C71AA2090C00050AC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EC87C61AA2090C00050AC6 /* Images.xcassets */; };
 		99EC87CA1AA2090C00050AC6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99EC87C81AA2090C00050AC6 /* LaunchScreen.xib */; };
@@ -49,30 +43,11 @@
 		99BA96981AA42033000F9591 /* TDSplashScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDSplashScreenVC.swift; sourceTree = "<group>"; };
 		99BA969D1AA421E7000F9591 /* VCUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCUtils.swift; sourceTree = "<group>"; };
 		99BA96A01AA43CDA000F9591 /* MonthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthVC.swift; sourceTree = "<group>"; };
-		99BA96A41AA44240000F9591 /* JTCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendar.h; sourceTree = "<group>"; };
-		99BA96A51AA44240000F9591 /* JTCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendar.m; sourceTree = "<group>"; };
-		99BA96A61AA44240000F9591 /* JTCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarAppearance.h; sourceTree = "<group>"; };
-		99BA96A71AA44240000F9591 /* JTCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarAppearance.m; sourceTree = "<group>"; };
-		99BA96A81AA44240000F9591 /* JTCalendarContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarContentView.h; sourceTree = "<group>"; };
-		99BA96A91AA44240000F9591 /* JTCalendarContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarContentView.m; sourceTree = "<group>"; };
-		99BA96AA1AA44240000F9591 /* JTCalendarDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarDataCache.h; sourceTree = "<group>"; };
-		99BA96AB1AA44240000F9591 /* JTCalendarDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarDataCache.m; sourceTree = "<group>"; };
-		99BA96AC1AA44240000F9591 /* JTCalendarDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarDayView.h; sourceTree = "<group>"; };
-		99BA96AD1AA44240000F9591 /* JTCalendarDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarDayView.m; sourceTree = "<group>"; };
-		99BA96AE1AA44240000F9591 /* JTCalendarMenuMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMenuMonthView.h; sourceTree = "<group>"; };
-		99BA96AF1AA44240000F9591 /* JTCalendarMenuMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMenuMonthView.m; sourceTree = "<group>"; };
-		99BA96B01AA44240000F9591 /* JTCalendarMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMenuView.h; sourceTree = "<group>"; };
-		99BA96B11AA44240000F9591 /* JTCalendarMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMenuView.m; sourceTree = "<group>"; };
-		99BA96B21AA44240000F9591 /* JTCalendarMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMonthView.h; sourceTree = "<group>"; };
-		99BA96B31AA44240000F9591 /* JTCalendarMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMonthView.m; sourceTree = "<group>"; };
-		99BA96B41AA44240000F9591 /* JTCalendarMonthWeekDaysView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMonthWeekDaysView.h; sourceTree = "<group>"; };
-		99BA96B51AA44240000F9591 /* JTCalendarMonthWeekDaysView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMonthWeekDaysView.m; sourceTree = "<group>"; };
-		99BA96B61AA44240000F9591 /* JTCalendarViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarViewDataSource.h; sourceTree = "<group>"; };
-		99BA96B71AA44240000F9591 /* JTCalendarWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarWeekView.h; sourceTree = "<group>"; };
-		99BA96B81AA44240000F9591 /* JTCalendarWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarWeekView.m; sourceTree = "<group>"; };
-		99BA96B91AA44240000F9591 /* JTCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCircleView.h; sourceTree = "<group>"; };
-		99BA96BA1AA44240000F9591 /* JTCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCircleView.m; sourceTree = "<group>"; };
-		99BA96CA1AA44B49000F9591 /* ObjectiveC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveC.h; sourceTree = "<group>"; };
+		99BA96DB1AA479AF000F9591 /* TDCalendar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDCalendar.xib; sourceTree = "<group>"; };
+		99BA96DD1AA479BA000F9591 /* TDCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDCalendar.swift; sourceTree = "<group>"; };
+		99BA96DF1AA47ADE000F9591 /* TDMonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDMonthView.swift; sourceTree = "<group>"; };
+		99BA96E21AA47B12000F9591 /* TDMonthView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDMonthView.xib; sourceTree = "<group>"; };
+		99BA96E41AA47DEC000F9591 /* TDCalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDCalendarVC.swift; sourceTree = "<group>"; };
 		99EC87BA1AA2090C00050AC6 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EC87BE1AA2090C00050AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99EC87C41AA2090C00050AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,39 +111,8 @@
 		99BA96A21AA44240000F9591 /* 9999-3rds */ = {
 			isa = PBXGroup;
 			children = (
-				99BA96A31AA44240000F9591 /* JTCalendar */,
 			);
 			path = "9999-3rds";
-			sourceTree = "<group>";
-		};
-		99BA96A31AA44240000F9591 /* JTCalendar */ = {
-			isa = PBXGroup;
-			children = (
-				99BA96A41AA44240000F9591 /* JTCalendar.h */,
-				99BA96A51AA44240000F9591 /* JTCalendar.m */,
-				99BA96A61AA44240000F9591 /* JTCalendarAppearance.h */,
-				99BA96A71AA44240000F9591 /* JTCalendarAppearance.m */,
-				99BA96A81AA44240000F9591 /* JTCalendarContentView.h */,
-				99BA96A91AA44240000F9591 /* JTCalendarContentView.m */,
-				99BA96AA1AA44240000F9591 /* JTCalendarDataCache.h */,
-				99BA96AB1AA44240000F9591 /* JTCalendarDataCache.m */,
-				99BA96AC1AA44240000F9591 /* JTCalendarDayView.h */,
-				99BA96AD1AA44240000F9591 /* JTCalendarDayView.m */,
-				99BA96AE1AA44240000F9591 /* JTCalendarMenuMonthView.h */,
-				99BA96AF1AA44240000F9591 /* JTCalendarMenuMonthView.m */,
-				99BA96B01AA44240000F9591 /* JTCalendarMenuView.h */,
-				99BA96B11AA44240000F9591 /* JTCalendarMenuView.m */,
-				99BA96B21AA44240000F9591 /* JTCalendarMonthView.h */,
-				99BA96B31AA44240000F9591 /* JTCalendarMonthView.m */,
-				99BA96B41AA44240000F9591 /* JTCalendarMonthWeekDaysView.h */,
-				99BA96B51AA44240000F9591 /* JTCalendarMonthWeekDaysView.m */,
-				99BA96B61AA44240000F9591 /* JTCalendarViewDataSource.h */,
-				99BA96B71AA44240000F9591 /* JTCalendarWeekView.h */,
-				99BA96B81AA44240000F9591 /* JTCalendarWeekView.m */,
-				99BA96B91AA44240000F9591 /* JTCircleView.h */,
-				99BA96BA1AA44240000F9591 /* JTCircleView.m */,
-			);
-			path = JTCalendar;
 			sourceTree = "<group>";
 		};
 		99EC87B11AA2090C00050AC6 = {
@@ -204,6 +148,11 @@
 				99EC87C81AA2090C00050AC6 /* LaunchScreen.xib */,
 				99EC87C31AA2090C00050AC6 /* Main.storyboard */,
 				99EC87BD1AA2090C00050AC6 /* Supporting Files */,
+				99BA96DB1AA479AF000F9591 /* TDCalendar.xib */,
+				99BA96DD1AA479BA000F9591 /* TDCalendar.swift */,
+				99BA96DF1AA47ADE000F9591 /* TDMonthView.swift */,
+				99BA96E21AA47B12000F9591 /* TDMonthView.xib */,
+				99BA96E41AA47DEC000F9591 /* TDCalendarVC.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -271,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				99EC88001AA36EF800050AC6 /* AppDelegate.swift */,
-				99BA96CA1AA44B49000F9591 /* ObjectiveC.h */,
 			);
 			path = "00-App";
 			sourceTree = "<group>";
@@ -367,8 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				99EC87C51AA2090C00050AC6 /* Main.storyboard in Resources */,
+				99BA96E31AA47B12000F9591 /* TDMonthView.xib in Resources */,
 				99EC87CA1AA2090C00050AC6 /* LaunchScreen.xib in Resources */,
 				99EC87F31AA2239900050AC6 /* Basic.html in Resources */,
+				99BA96DC1AA479AF000F9591 /* TDCalendar.xib in Resources */,
 				99EC87FB1AA2D4B100050AC6 /* amlich_hnd_.js in Resources */,
 				99EC87C71AA2090C00050AC6 /* Images.xcassets in Resources */,
 				99EC87F21AA2239900050AC6 /* amlich_hnd.js in Resources */,
@@ -389,25 +339,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99BA96E51AA47DEC000F9591 /* TDCalendarVC.swift in Sources */,
 				99EC88041AA36EF800050AC6 /* ViewController.swift in Sources */,
 				99EC88031AA36EF800050AC6 /* AppDelegate.swift in Sources */,
-				99BA96C01AA44240000F9591 /* JTCalendarMenuMonthView.m in Sources */,
-				99BA96BE1AA44240000F9591 /* JTCalendarDataCache.m in Sources */,
 				99EC87F71AA223FD00050AC6 /* JavaScriptUtils.swift in Sources */,
 				99BA969E1AA421E7000F9591 /* VCUtils.swift in Sources */,
-				99BA96C31AA44240000F9591 /* JTCalendarMonthWeekDaysView.m in Sources */,
-				99BA96C51AA44240000F9591 /* JTCircleView.m in Sources */,
 				99EC87FE1AA36A0800050AC6 /* WebViewSources.swift in Sources */,
+				99BA96DE1AA479BA000F9591 /* TDCalendar.swift in Sources */,
 				99EC87F91AA2241700050AC6 /* FileUtils.swift in Sources */,
 				99BA96991AA42033000F9591 /* TDSplashScreenVC.swift in Sources */,
-				99BA96C41AA44240000F9591 /* JTCalendarWeekView.m in Sources */,
-				99BA96C21AA44240000F9591 /* JTCalendarMonthView.m in Sources */,
-				99BA96BC1AA44240000F9591 /* JTCalendarAppearance.m in Sources */,
-				99BA96C11AA44240000F9591 /* JTCalendarMenuView.m in Sources */,
 				99BA96A11AA43CDA000F9591 /* MonthVC.swift in Sources */,
-				99BA96BD1AA44240000F9591 /* JTCalendarContentView.m in Sources */,
-				99BA96BB1AA44240000F9591 /* JTCalendar.m in Sources */,
-				99BA96BF1AA44240000F9591 /* JTCalendarDayView.m in Sources */,
+				99BA96E01AA47ADE000F9591 /* TDMonthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +477,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Calendar/00-App/ObjectiveC.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -549,7 +491,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Calendar/00-App/ObjectiveC.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
