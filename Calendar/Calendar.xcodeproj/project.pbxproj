@@ -72,6 +72,7 @@
 		99BA96B81AA44240000F9591 /* JTCalendarWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarWeekView.m; sourceTree = "<group>"; };
 		99BA96B91AA44240000F9591 /* JTCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCircleView.h; sourceTree = "<group>"; };
 		99BA96BA1AA44240000F9591 /* JTCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCircleView.m; sourceTree = "<group>"; };
+		99BA96CA1AA44B49000F9591 /* ObjectiveC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveC.h; sourceTree = "<group>"; };
 		99EC87BA1AA2090C00050AC6 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EC87BE1AA2090C00050AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99EC87C41AA2090C00050AC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,7 +192,6 @@
 		99EC87BC1AA2090C00050AC6 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				99BA96A21AA44240000F9591 /* 9999-3rds */,
 				99EC87FF1AA36EF700050AC6 /* 00-App */,
 				99EC87F41AA223FD00050AC6 /* 01-JavaScriptUtils */,
 				99EC87F61AA223FD00050AC6 /* 02-FileUtils */,
@@ -199,6 +199,7 @@
 				99EC88011AA36EF800050AC6 /* 80-ViewControllers */,
 				99EC87FC1AA369F600050AC6 /* 98-WebViewSource */,
 				99EC87EF1AA2239900050AC6 /* 99-Caculator */,
+				99BA96A21AA44240000F9591 /* 9999-3rds */,
 				99EC87C61AA2090C00050AC6 /* Images.xcassets */,
 				99EC87C81AA2090C00050AC6 /* LaunchScreen.xib */,
 				99EC87C31AA2090C00050AC6 /* Main.storyboard */,
@@ -270,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				99EC88001AA36EF800050AC6 /* AppDelegate.swift */,
+				99BA96CA1AA44B49000F9591 /* ObjectiveC.h */,
 			);
 			path = "00-App";
 			sourceTree = "<group>";
@@ -530,8 +532,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Calendar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Calendar/00-App/ObjectiveC.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -542,8 +546,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Calendar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Calendar/00-App/ObjectiveC.h";
 			};
 			name = Release;
 		};
