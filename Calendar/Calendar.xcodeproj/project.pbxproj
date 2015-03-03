@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9906913F1AA4C37E0069432B /* TDViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906913E1AA4C37E0069432B /* TDViewUtils.swift */; };
+		990691431AA4D2D70069432B /* TDDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990691421AA4D2D70069432B /* TDDateUtils.swift */; };
 		99BA96991AA42033000F9591 /* TDSplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96981AA42033000F9591 /* TDSplashScreenVC.swift */; };
 		99BA969E1AA421E7000F9591 /* VCUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA969D1AA421E7000F9591 /* VCUtils.swift */; };
 		99BA96A11AA43CDA000F9591 /* MonthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96A01AA43CDA000F9591 /* MonthVC.swift */; };
@@ -27,6 +29,8 @@
 		99EC87FE1AA36A0800050AC6 /* WebViewSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC87FD1AA36A0800050AC6 /* WebViewSources.swift */; };
 		99EC88031AA36EF800050AC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC88001AA36EF800050AC6 /* AppDelegate.swift */; };
 		99EC88041AA36EF800050AC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EC88021AA36EF800050AC6 /* ViewController.swift */; };
+		99F94A2E1AA49BD600943E44 /* DateItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F94A2D1AA49BD600943E44 /* DateItemCollectionCell.swift */; };
+		99F94A301AA49C1900943E44 /* DateItemCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F94A2F1AA49C1900943E44 /* DateItemCollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9906913E1AA4C37E0069432B /* TDViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDViewUtils.swift; sourceTree = "<group>"; };
+		990691421AA4D2D70069432B /* TDDateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDDateUtils.swift; sourceTree = "<group>"; };
+		990691451AA4D8750069432B /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; };
 		99BA96981AA42033000F9591 /* TDSplashScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDSplashScreenVC.swift; sourceTree = "<group>"; };
 		99BA969D1AA421E7000F9591 /* VCUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCUtils.swift; sourceTree = "<group>"; };
 		99BA96A01AA43CDA000F9591 /* MonthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthVC.swift; sourceTree = "<group>"; };
@@ -64,6 +71,8 @@
 		99EC87FD1AA36A0800050AC6 /* WebViewSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewSources.swift; sourceTree = "<group>"; };
 		99EC88001AA36EF800050AC6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99EC88021AA36EF800050AC6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99F94A2D1AA49BD600943E44 /* DateItemCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateItemCollectionCell.swift; sourceTree = "<group>"; };
+		99F94A2F1AA49C1900943E44 /* DateItemCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateItemCollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9906913D1AA4C3720069432B /* 03-TDViewUtils */ = {
+			isa = PBXGroup;
+			children = (
+				9906913E1AA4C37E0069432B /* TDViewUtils.swift */,
+			);
+			path = "03-TDViewUtils";
+			sourceTree = "<group>";
+		};
+		990691411AA4D2C50069432B /* 04-TDDateUtils */ = {
+			isa = PBXGroup;
+			children = (
+				990691421AA4D2D70069432B /* TDDateUtils.swift */,
+			);
+			path = "04-TDDateUtils";
+			sourceTree = "<group>";
+		};
 		99BA96971AA41EE4000F9591 /* 00-SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +161,9 @@
 		99EC87BC1AA2090C00050AC6 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				990691451AA4D8750069432B /* Test.playground */,
+				990691411AA4D2C50069432B /* 04-TDDateUtils */,
+				9906913D1AA4C3720069432B /* 03-TDViewUtils */,
 				99EC87FF1AA36EF700050AC6 /* 00-App */,
 				99EC87F41AA223FD00050AC6 /* 01-JavaScriptUtils */,
 				99EC87F61AA223FD00050AC6 /* 02-FileUtils */,
@@ -153,6 +181,8 @@
 				99BA96DF1AA47ADE000F9591 /* TDMonthView.swift */,
 				99BA96E21AA47B12000F9591 /* TDMonthView.xib */,
 				99BA96E41AA47DEC000F9591 /* TDCalendarVC.swift */,
+				99F94A2D1AA49BD600943E44 /* DateItemCollectionCell.swift */,
+				99F94A2F1AA49C1900943E44 /* DateItemCollectionCell.xib */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -321,6 +351,7 @@
 				99BA96DC1AA479AF000F9591 /* TDCalendar.xib in Resources */,
 				99EC87FB1AA2D4B100050AC6 /* amlich_hnd_.js in Resources */,
 				99EC87C71AA2090C00050AC6 /* Images.xcassets in Resources */,
+				99F94A301AA49C1900943E44 /* DateItemCollectionCell.xib in Resources */,
 				99EC87F21AA2239900050AC6 /* amlich_hnd.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,8 +376,11 @@
 				99EC87F71AA223FD00050AC6 /* JavaScriptUtils.swift in Sources */,
 				99BA969E1AA421E7000F9591 /* VCUtils.swift in Sources */,
 				99EC87FE1AA36A0800050AC6 /* WebViewSources.swift in Sources */,
+				9906913F1AA4C37E0069432B /* TDViewUtils.swift in Sources */,
+				990691431AA4D2D70069432B /* TDDateUtils.swift in Sources */,
 				99BA96DE1AA479BA000F9591 /* TDCalendar.swift in Sources */,
 				99EC87F91AA2241700050AC6 /* FileUtils.swift in Sources */,
+				99F94A2E1AA49BD600943E44 /* DateItemCollectionCell.swift in Sources */,
 				99BA96991AA42033000F9591 /* TDSplashScreenVC.swift in Sources */,
 				99BA96A11AA43CDA000F9591 /* MonthVC.swift in Sources */,
 				99BA96E01AA47ADE000F9591 /* TDMonthView.swift in Sources */,

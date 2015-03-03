@@ -73,4 +73,19 @@ extension UIViewController
     }
     
     //////////// End View ////////////////
+    
+    
+    //////////// Physicall value ////////////////
+    
+    func td_width()->CGFloat
+    {
+        return self.view.frame.size.width
+    }
+    
+    func td_height()->CGFloat
+    {
+        return self.view.frame.size.height
+    }
+    
+    //////////// End Physicall value ////////////////
 }

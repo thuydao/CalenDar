@@ -15,10 +15,17 @@ class TDCalendarVC: UIViewController
 {
     var item : TDMonthView!
  
-    override func viewDidLoad() {
-        item = self.td_getViewFormNib("TDMonthView", index: 0) as TDMonthView
-        item.frame = CGRectMake(10, 50, item.frame.size.width, item.frame.size.height)
-        item.backgroundColor = UIColor.redColor()
+    override func viewDidLoad()
+    {
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        var clv = UICollectionView(frame: CGRectMake(0, 50, self.view.frame.size.width, 200),  collectionViewLayout: layout)
+        
+        item = TDMonthView(clvMonth: clv, date: NSDate())
+
         self.view.addSubview(item)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        item.reload()
     }
 }
