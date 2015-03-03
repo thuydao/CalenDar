@@ -45,7 +45,7 @@ class TDMonthView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     // MARK: UICollectionViewDataSource
 
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 6
+        return 7
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -84,7 +84,28 @@ class TDMonthView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         }
         else
         {
-            cell.lbTitle.text = "xxx"
+            var week : NSInteger = indexPath.section
+            var day : NSInteger = indexPath.row
+            var temp : NSInteger = (week - 1) * 7 + day
+            let firstMonth = self.currentDate.td_beginOfMonth()
+            var firstWeek = firstMonth.td_beginOfWeek()
+            //process today
+            if firstWeek.td_day() > 1 && firstWeek.td_day() < 8 {
+                firstWeek = firstWeek.td_addDay(-3)
+                firstWeek = firstWeek.td_beginOfWeek()
+            }
+            
+            let datetmp = firstWeek.td_addDay(temp)
+            
+            cell.lbTitle.text = NSString(format: "%d", datetmp.td_day())
+            
+            if self.currentDate.td_month() == datetmp.td_month() {
+                cell.lbTitle.textColor = UIColor.blackColor()
+            }
+            else
+            {
+                cell.lbTitle.textColor = UIColor.grayColor()
+            }
         }
         
         return cell

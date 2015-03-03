@@ -15,7 +15,6 @@
 		99BA96DC1AA479AF000F9591 /* TDCalendar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99BA96DB1AA479AF000F9591 /* TDCalendar.xib */; };
 		99BA96DE1AA479BA000F9591 /* TDCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96DD1AA479BA000F9591 /* TDCalendar.swift */; };
 		99BA96E01AA47ADE000F9591 /* TDMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96DF1AA47ADE000F9591 /* TDMonthView.swift */; };
-		99BA96E31AA47B12000F9591 /* TDMonthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99BA96E21AA47B12000F9591 /* TDMonthView.xib */; };
 		99BA96E51AA47DEC000F9591 /* TDCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96E41AA47DEC000F9591 /* TDCalendarVC.swift */; };
 		99EC87C51AA2090C00050AC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99EC87C31AA2090C00050AC6 /* Main.storyboard */; };
 		99EC87C71AA2090C00050AC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99EC87C61AA2090C00050AC6 /* Images.xcassets */; };
@@ -53,7 +52,6 @@
 		99BA96DB1AA479AF000F9591 /* TDCalendar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDCalendar.xib; sourceTree = "<group>"; };
 		99BA96DD1AA479BA000F9591 /* TDCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDCalendar.swift; sourceTree = "<group>"; };
 		99BA96DF1AA47ADE000F9591 /* TDMonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDMonthView.swift; sourceTree = "<group>"; };
-		99BA96E21AA47B12000F9591 /* TDMonthView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDMonthView.xib; sourceTree = "<group>"; };
 		99BA96E41AA47DEC000F9591 /* TDCalendarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDCalendarVC.swift; sourceTree = "<group>"; };
 		99EC87BA1AA2090C00050AC6 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99EC87BE1AA2090C00050AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 				99BA96DB1AA479AF000F9591 /* TDCalendar.xib */,
 				99BA96DD1AA479BA000F9591 /* TDCalendar.swift */,
 				99BA96DF1AA47ADE000F9591 /* TDMonthView.swift */,
-				99BA96E21AA47B12000F9591 /* TDMonthView.xib */,
 				99BA96E41AA47DEC000F9591 /* TDCalendarVC.swift */,
 				99F94A2D1AA49BD600943E44 /* DateItemCollectionCell.swift */,
 				99F94A2F1AA49C1900943E44 /* DateItemCollectionCell.xib */,
@@ -345,7 +342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				99EC87C51AA2090C00050AC6 /* Main.storyboard in Resources */,
-				99BA96E31AA47B12000F9591 /* TDMonthView.xib in Resources */,
 				99EC87CA1AA2090C00050AC6 /* LaunchScreen.xib in Resources */,
 				99EC87F31AA2239900050AC6 /* Basic.html in Resources */,
 				99BA96DC1AA479AF000F9591 /* TDCalendar.xib in Resources */,
