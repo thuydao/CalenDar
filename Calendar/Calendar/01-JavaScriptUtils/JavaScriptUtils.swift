@@ -13,7 +13,6 @@ let K_HTML5_DEMO:String = "<!DOCTYPE html><html><body>%@</body></html>"
 extension UIWebView
 {
     class func alert() {
-        println("There are foos")
     }
     
     /*excute js*/

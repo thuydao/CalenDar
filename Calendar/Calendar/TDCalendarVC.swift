@@ -34,7 +34,7 @@ class TDCalendarVC: UIViewController
     override func viewDidLoad()
     {
         item = self.td_getViewFormNib("TDCalendar", index: 0) as TDCalendar
-        item.frame = CGRectMake(0, 50, self.view.frame.size.width, 250)
+        item.frame = CGRectMake(0, 50, self.view.frame.size.width, 270)
         self.view.addSubview(item)
     }
     

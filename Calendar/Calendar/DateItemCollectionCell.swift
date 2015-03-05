@@ -12,4 +12,5 @@ import UIKit
 class DateItemCollectionCell: UICollectionViewCell
 {
     @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var lbLunaTitle: UILabel!
 }

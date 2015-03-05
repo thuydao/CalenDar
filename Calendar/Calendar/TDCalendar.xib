@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,27 +10,22 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jjr-TQ-g85">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jjr-TQ-g85">
                     <rect key="frame" x="0.0" y="30" width="320" height="220"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="320" id="kQZ-gy-qkp"/>
-                    </constraints>
+                    <variation key="widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="271"/>
+                    </variation>
                     <connections>
                         <outlet property="delegate" destination="FYs-kT-4Td" id="aNP-LT-rPC"/>
                     </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="Jjr-TQ-g85" firstAttribute="top" secondItem="FYs-kT-4Td" secondAttribute="top" constant="30" id="RDw-Pa-cIV"/>
-                <constraint firstItem="Jjr-TQ-g85" firstAttribute="leading" secondItem="FYs-kT-4Td" secondAttribute="leading" id="qZB-22-9Z6"/>
-                <constraint firstAttribute="bottom" secondItem="Jjr-TQ-g85" secondAttribute="bottom" id="spI-GL-NAV"/>
-            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="svCalendarsList" destination="Jjr-TQ-g85" id="KWe-6W-2fN"/>
             </connections>
-            <point key="canvasLocation" x="331" y="130"/>
+            <point key="canvasLocation" x="331" y="119.5"/>
         </view>
     </objects>
 </document>

@@ -98,6 +98,7 @@ class TDMonthView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
             let datetmp = firstWeek.td_addDay(temp)
             
             cell.lbTitle.text = NSString(format: "%d", datetmp.td_day())
+            cell.lbLunaTitle.text = NSString(format: "%d", datetmp.td_month())
             
             if self.currentDate.td_month() == datetmp.td_month() {
                 cell.lbTitle.textColor = UIColor.blackColor()
@@ -118,9 +119,9 @@ class TDMonthView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
             let width = self.frame.size.width
             // fix height
             if indexPath.section == 0 {
-                return CGSize(width: (width - 45)/8, height: 25)
+                return CGSize(width: (width - 45)/8, height: 35)
             }
-            return CGSize(width: (width - 45)/8, height: 20)
+            return CGSize(width: (width - 45)/8, height: 30)
     }
 
     private let sectionInsets = UIEdgeInsets(top: 5 , left: 5.0, bottom: 5.0, right: 0)
@@ -129,5 +130,38 @@ class TDMonthView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         layout collectionViewLayout: UICollectionViewLayout!,
         insetForSectionAtIndex section: Int) -> UIEdgeInsets {
             return sectionInsets
+    }
+    
+    //MARK: Click To Item
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        if indexPath.section == 0 {
+            //cancel
+        }
+        else
+        {
+            var week : NSInteger = indexPath.section
+            var day : NSInteger = indexPath.row
+            var temp : NSInteger = (week - 1) * 7 + day
+            let firstMonth = self.currentDate.td_beginOfMonth()
+            var firstWeek = firstMonth.td_beginOfWeek()
+            //process today
+            if firstWeek.td_day() > 1 && firstWeek.td_day() < 8 {
+                firstWeek = firstWeek.td_addDay(-3)
+                firstWeek = firstWeek.td_beginOfWeek()
+            }
+            
+            let datetmp = firstWeek.td_addDay(temp)
+            
+            if self.currentDate.td_month() == datetmp.td_month() {
+               println(datetmp)
+            }
+            else
+            {
+               //cancel
+            }
+        }
+        
     }
 }
