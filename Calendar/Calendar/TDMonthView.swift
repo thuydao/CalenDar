@@ -91,11 +91,11 @@ class TDMonthView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
             var firstWeek = firstMonth.td_beginOfWeek()
             //process today
             if firstWeek.td_day() > 1 && firstWeek.td_day() < 8 {
-                firstWeek = firstWeek.td_addDay(-3)
+                firstWeek = firstWeek.td_dateByAddingDays(-3)
                 firstWeek = firstWeek.td_beginOfWeek()
             }
             
-            let datetmp = firstWeek.td_addDay(temp)
+            let datetmp = firstWeek.td_dateByAddingDays(temp)
             
             cell.lbTitle.text = NSString(format: "%d", datetmp.td_day())
             cell.lbLunaTitle.text = NSString(format: "%d", datetmp.td_month())
@@ -148,11 +148,11 @@ class TDMonthView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
             var firstWeek = firstMonth.td_beginOfWeek()
             //process today
             if firstWeek.td_day() > 1 && firstWeek.td_day() < 8 {
-                firstWeek = firstWeek.td_addDay(-3)
+                firstWeek = firstWeek.td_dateByAddingDays(-3)
                 firstWeek = firstWeek.td_beginOfWeek()
             }
             
-            let datetmp = firstWeek.td_addDay(temp)
+            let datetmp = firstWeek.td_dateByAddingDays(temp)
             
             if self.currentDate.td_month() == datetmp.td_month() {
                println(datetmp)

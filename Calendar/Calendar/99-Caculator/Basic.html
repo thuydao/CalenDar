@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-     <script type="text/javascript" language="JavaScript" src="amlich_hnd.js">
-    </head>
-    <body>
-        
-        thuydao
-        <!-- Bắt đầu Lịch vạn niên -->
-        <div class='widget HTML' id='HTML10'>
+        <script type="text/javascript" language="JavaScript" src="amlich_hnd.js">
+            </head>
+            <body>
+            
+            thuydao
+            <!-- Bắt đầu Lịch vạn niên -->
+            <div class='widget HTML' id='HTML10'>
             <div class='widget-content'>
-                <center>
-                   
-                        </script>
-                    <script language="JavaScript">
-                        
-                        setOutputSize("small");
-                        document.writeln(printSelectedMonth());
-                        </script>
-                </center>
-            </div>
+            <center>
+            
+            </script>
+        <script language="JavaScript">
+            
+            setOutputSize("small");
+            document.writeln(printSelectedMonth());
+            
+            function td_getLunarDate(dd, mm, yyyy) {
+                var ly, jd;
+                if (yyyy < 1800 || 2199 < yyyy) {
+                    //return new LunarDate(0, 0, 0, 0, 0);
+                }
+                ly = getYearInfo(yyyy);
+                jd = jdn(dd, mm, yyyy);
+                if (jd < ly[0].jd) {
+                    ly = getYearInfo(yyyy - 1);
+                }
+                return td_findLunarDate(jd, ly, dd, mm, yyyy);
+            }
+        
+            </script>
+        </center>
+        </div>
         </div>
         <!-- Kết thúc Lịch vạn niên -->
         
         <p id="demo">xxxx </p>
         
         
-    </body>
+        </body>
 </html>

@@ -8,7 +8,6 @@
 
 import UIKit
 
-let KMAX = 100
 let KCOMPONENTS = 3
 
 class TDCalendar: UIView, UIScrollViewDelegate
@@ -25,21 +24,21 @@ class TDCalendar: UIView, UIScrollViewDelegate
     }
     
     required init(coder aDecoder: NSCoder) {
-       
+        
         super.init(coder: aDecoder)
     }
     
     func setup()
     {
-         self.svCalendarsList.frame.size.height = 250
+        self.svCalendarsList.frame.size.height = 250
         self.svCalendarsList.pagingEnabled = true
         var n = 2 * KCOMPONENTS + 1
         
-        var j = KMAX - KCOMPONENTS
+        var j = 0
         
         var frame : CGRect = self.svCalendarsList.frame
         for var i = -1 * KCOMPONENTS; i <= KCOMPONENTS; i++ {
-            var temp : TDMonthView = self.initTMonthView(currentDate.td_addMonth(i))
+            var temp : TDMonthView = self.initTMonthView(currentDate.td_dateByAddingMonths(i))
             frame = self.svCalendarsList.frame;
             frame.origin.x = self.svCalendarsList.frame.size.width * CGFloat(j)
             temp.frame = frame
@@ -48,7 +47,10 @@ class TDCalendar: UIView, UIScrollViewDelegate
             self.svCalendarsList.addSubview(temp)
         }
         
-        self.svCalendarsList.contentSize = CGSizeMake(CGFloat(2 * KMAX + 1)*self.svCalendarsList.frame.size.width, self.svCalendarsList.frame.size.height)
+        self.svCalendarsList.contentSize = CGSizeMake(CGFloat(n)*self.svCalendarsList.frame.size.width, self.svCalendarsList.frame.size.height)
+        //hide scroll indicator
+        self.svCalendarsList.showsHorizontalScrollIndicator = false
+        self.svCalendarsList.showsVerticalScrollIndicator = false
         
         self.scrollToCenter()
     }
@@ -64,35 +66,26 @@ class TDCalendar: UIView, UIScrollViewDelegate
     //MARK ScrollView
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        println(scrollView.contentOffset.x)
         var index: Int = Int (scrollView.contentOffset.x / scrollView.frame.size.width)
-        if self.page != index {
+        
+        if (scrollView.contentOffset.x < 0)
+        {
+            self.reloadDateALlItem()
+        }
             
-            var frame = self.svCalendarsList.frame
+        else if (index >= 2 * KCOMPONENTS)
+        {
+            self.reloadDateALlItem()
+        }
             
-            if self.page > index {
-                var first : TDMonthView = self.arrItem[0] as TDMonthView
-                var temp : TDMonthView = self.arrItem[self.arrItem.count - 1] as TDMonthView
-                self.arrItem.removeObjectAtIndex(self.arrItem.count - 1)
-                temp.currentDate = first.currentDate.td_addMonth(-1)
-                temp.reload()
-                frame.origin.x = first.frame.origin.x - first.frame.size.width
-                temp.frame = frame
-                self.arrItem.insertObject(temp,atIndex: 0)
+        else
+        {
+            if (index != self.page)
+            {
+                self.page = index
+                self.currentDate = (arrItem[index] as TDMonthView).currentDate
             }
-            else if self.page < index {
-                
-                var last : TDMonthView = self.arrItem[self.arrItem.count - 1] as TDMonthView
-                var temp : TDMonthView = self.arrItem[0] as TDMonthView
-                 self.arrItem.removeObjectAtIndex(0)
-                temp.currentDate = last.currentDate.td_addMonth(1)
-                temp.reload()
-                frame.origin.x = last.frame.origin.x + last.frame.size.width
-                temp.frame = frame
-                self.arrItem.addObject(temp)
-               
-                self.svCalendarsList.addSubview(temp)
-            }
-            self.page = index
         }
     }
     
@@ -100,20 +93,31 @@ class TDCalendar: UIView, UIScrollViewDelegate
         
     }
     
-    func reuse()
+    
+    func reloadDateALlItem()
     {
-        println(self.page)
-        println(KMAX)
+        UIView.animateWithDuration(0.3, delay: 0.0, options: .TransitionFlipFromLeft, animations:
+            {
+                var j = 0
+                for var i = -1 * KCOMPONENTS; i <= KCOMPONENTS; i++ {
+                    var temp : TDMonthView = self.arrItem[j] as TDMonthView
+                    j++
+                    temp.currentDate = self.currentDate.td_dateByAddingMonths(i)
+                    temp .reload()
+                }
+                
+            },
+            completion: { finished in
+                self.scrollToCenter()
+        })
     }
     
     func scrollToCenter()
     {
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.5 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
-            var frame : CGRect = self.svCalendarsList.frame
-            self.page = KMAX
-            frame.origin.x = self.svCalendarsList.frame.size.width * CGFloat(KMAX)
-            self.svCalendarsList.scrollRectToVisible(frame, animated: false)
-        }
+        var n = 2 * KCOMPONENTS + 1
+        var frame : CGRect = self.svCalendarsList.frame
+        self.page = n
+        frame.origin.x = self.svCalendarsList.frame.size.width * CGFloat(KCOMPONENTS)
+        self.svCalendarsList.scrollRectToVisible(frame, animated: false)
     }
 }

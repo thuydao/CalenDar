@@ -185,6 +185,19 @@ function findLunarDate(jd, ly) {
     return ret;
 }
 
+function td_findLunarDate(jd, ly, dd, mm, yyyy) {
+    if (jd > LAST_DAY || jd < FIRST_DAY || ly[0].jd > jd) {
+        return new LunarDate(0, 0, 0, 0, jd);
+    }
+    var i = ly.length-1;
+    while (jd < ly[i].jd) {
+        i--;
+    }
+    var off = jd - ly[i].jd;
+    var tmp = new LunarDate(ly[i].day+off, ly[i].month, ly[i].year, ly[i].leap, jd);
+    return td_infoDay(tmp.day, tmp.month, tmp.year, tmp.leap, tmp.jd, dd, mm, yyyy)
+}
+
 function getLunarDate(dd, mm, yyyy) {
     var ly, jd;
     if (yyyy < 1800 || 2199 < yyyy) {
@@ -612,14 +625,20 @@ function alertDayInfo(dd, mm, yy, leap, jd, sday, smonth, syear) {
 function td_infoDay(dd, mm, yy, leap, jd, sday, smonth, syear)
 {
     var lunar = new LunarDate(dd, mm, yy, leap, jd);
-
-    var s = getDayString(lunar, sday, smonth, syear);
-    s += " \u00E2m l\u1ECBch\n";
-    s += getDayName(lunar);
-    s += "\nGi\u1EDD \u0111\u1EA7u ng\u00E0y: "+getCanHour0(jd)+" "+CHI[0];
-    s += "\nTi\u1EBFt: "+TIETKHI[getSunLongitude(jd+1, 7.0)];
-    s += "\nGi\u1EDD ho\u00E0ng \u0111\u1EA1o: "+getGioHoangDao(jd);
+    
+    var s = dd + "/" + mm + "/" + yy
+    s += "xxoxx" + getDayName(lunar);
+    s += "xxoxx" + getCanHour0(jd)+" "+CHI[0];
+    s += "xxoxx" + TIETKHI[getSunLongitude(jd+1, 7.0)];
+    s += "xxoxx" + getGioHoangDao(jd);
     return s;
+    
+//    Ngày 1 tháng 12 âm lịch
+//    Ngày Giáp Dần, tháng Đinh Sửu, năm Kỷ Tỵ
+//    Giờ đầu ngày: Giáp Tý
+//    Tiết: Đại hàn
+//    Giờ hoàng đạo: Tý (23-1), Sửu (1-3), Thìn (7-9),
+//    Tỵ (9-11), Mùi (13-15), Tuất (19-21))
 }
 
 function td_todayInfo(mm,yy)

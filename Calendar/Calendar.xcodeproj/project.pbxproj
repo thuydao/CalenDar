@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		9906913F1AA4C37E0069432B /* TDViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906913E1AA4C37E0069432B /* TDViewUtils.swift */; };
 		990691431AA4D2D70069432B /* TDDateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990691421AA4D2D70069432B /* TDDateUtils.swift */; };
+		990A18E51AAB5C52002AEAA5 /* TDDate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 990A18E31AAB5C52002AEAA5 /* TDDate.xcdatamodeld */; };
+		990A18E81AAB5EE9002AEAA5 /* TDCoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A18E71AAB5EE9002AEAA5 /* TDCoreDataUtils.swift */; };
+		990A18ED1AAB611B002AEAA5 /* TDGenerateDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A18EC1AAB611B002AEAA5 /* TDGenerateDates.swift */; };
+		990A18F11AAC2A7E002AEAA5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A18F01AAC2A7E002AEAA5 /* MainView.swift */; };
+		990A18F31AAC2B02002AEAA5 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A18F21AAC2B02002AEAA5 /* TodayView.swift */; };
+		990A18F51AAC2B61002AEAA5 /* TodayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990A18F41AAC2B61002AEAA5 /* TodayView.xib */; };
 		99BA96991AA42033000F9591 /* TDSplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96981AA42033000F9591 /* TDSplashScreenVC.swift */; };
 		99BA969E1AA421E7000F9591 /* VCUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA969D1AA421E7000F9591 /* VCUtils.swift */; };
 		99BA96A11AA43CDA000F9591 /* MonthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA96A01AA43CDA000F9591 /* MonthVC.swift */; };
@@ -46,6 +52,12 @@
 		9906913E1AA4C37E0069432B /* TDViewUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDViewUtils.swift; sourceTree = "<group>"; };
 		990691421AA4D2D70069432B /* TDDateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDDateUtils.swift; sourceTree = "<group>"; };
 		990691451AA4D8750069432B /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; };
+		990A18E41AAB5C52002AEAA5 /* TDDate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TDDate.xcdatamodel; sourceTree = "<group>"; };
+		990A18E71AAB5EE9002AEAA5 /* TDCoreDataUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDCoreDataUtils.swift; sourceTree = "<group>"; };
+		990A18EC1AAB611B002AEAA5 /* TDGenerateDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDGenerateDates.swift; sourceTree = "<group>"; };
+		990A18F01AAC2A7E002AEAA5 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		990A18F21AAC2B02002AEAA5 /* TodayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		990A18F41AAC2B61002AEAA5 /* TodayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayView.xib; sourceTree = "<group>"; };
 		99BA96981AA42033000F9591 /* TDSplashScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDSplashScreenVC.swift; sourceTree = "<group>"; };
 		99BA969D1AA421E7000F9591 /* VCUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCUtils.swift; sourceTree = "<group>"; };
 		99BA96A01AA43CDA000F9591 /* MonthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthVC.swift; sourceTree = "<group>"; };
@@ -107,6 +119,48 @@
 			path = "04-TDDateUtils";
 			sourceTree = "<group>";
 		};
+		990A18E11AAB5C24002AEAA5 /* 70-Resources */ = {
+			isa = PBXGroup;
+			children = (
+				990A18E21AAB5C24002AEAA5 /* 01-CoreData */,
+			);
+			path = "70-Resources";
+			sourceTree = "<group>";
+		};
+		990A18E21AAB5C24002AEAA5 /* 01-CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				990A18E31AAB5C52002AEAA5 /* TDDate.xcdatamodeld */,
+			);
+			path = "01-CoreData";
+			sourceTree = "<group>";
+		};
+		990A18E61AAB5ED6002AEAA5 /* 05-CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				990A18E71AAB5EE9002AEAA5 /* TDCoreDataUtils.swift */,
+			);
+			path = "05-CoreData";
+			sourceTree = "<group>";
+		};
+		990A18EB1AAB611B002AEAA5 /* 06-GenerateDates */ = {
+			isa = PBXGroup;
+			children = (
+				990A18EC1AAB611B002AEAA5 /* TDGenerateDates.swift */,
+			);
+			path = "06-GenerateDates";
+			sourceTree = "<group>";
+		};
+		990A18EF1AAC29C3002AEAA5 /* 02-MainView */ = {
+			isa = PBXGroup;
+			children = (
+				990A18F01AAC2A7E002AEAA5 /* MainView.swift */,
+				990A18F21AAC2B02002AEAA5 /* TodayView.swift */,
+				990A18F41AAC2B61002AEAA5 /* TodayView.xib */,
+			);
+			path = "02-MainView";
+			sourceTree = "<group>";
+		};
 		99BA96971AA41EE4000F9591 /* 00-SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,27 +213,30 @@
 		99EC87BC1AA2090C00050AC6 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				990691451AA4D8750069432B /* Test.playground */,
-				990691411AA4D2C50069432B /* 04-TDDateUtils */,
-				9906913D1AA4C3720069432B /* 03-TDViewUtils */,
 				99EC87FF1AA36EF700050AC6 /* 00-App */,
 				99EC87F41AA223FD00050AC6 /* 01-JavaScriptUtils */,
 				99EC87F61AA223FD00050AC6 /* 02-FileUtils */,
+				9906913D1AA4C3720069432B /* 03-TDViewUtils */,
+				990691411AA4D2C50069432B /* 04-TDDateUtils */,
+				990A18E61AAB5ED6002AEAA5 /* 05-CoreData */,
+				990A18EB1AAB611B002AEAA5 /* 06-GenerateDates */,
 				99BA969A1AA421BB000F9591 /* 10-VCUtils */,
+				990A18E11AAB5C24002AEAA5 /* 70-Resources */,
 				99EC88011AA36EF800050AC6 /* 80-ViewControllers */,
 				99EC87FC1AA369F600050AC6 /* 98-WebViewSource */,
 				99EC87EF1AA2239900050AC6 /* 99-Caculator */,
 				99BA96A21AA44240000F9591 /* 9999-3rds */,
+				99F94A2D1AA49BD600943E44 /* DateItemCollectionCell.swift */,
+				99F94A2F1AA49C1900943E44 /* DateItemCollectionCell.xib */,
 				99EC87C61AA2090C00050AC6 /* Images.xcassets */,
 				99EC87C81AA2090C00050AC6 /* LaunchScreen.xib */,
 				99EC87C31AA2090C00050AC6 /* Main.storyboard */,
 				99EC87BD1AA2090C00050AC6 /* Supporting Files */,
-				99BA96DB1AA479AF000F9591 /* TDCalendar.xib */,
 				99BA96DD1AA479BA000F9591 /* TDCalendar.swift */,
-				99BA96DF1AA47ADE000F9591 /* TDMonthView.swift */,
+				99BA96DB1AA479AF000F9591 /* TDCalendar.xib */,
 				99BA96E41AA47DEC000F9591 /* TDCalendarVC.swift */,
-				99F94A2D1AA49BD600943E44 /* DateItemCollectionCell.swift */,
-				99F94A2F1AA49C1900943E44 /* DateItemCollectionCell.xib */,
+				99BA96DF1AA47ADE000F9591 /* TDMonthView.swift */,
+				990691451AA4D8750069432B /* Test.playground */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -254,8 +311,9 @@
 		99EC88011AA36EF800050AC6 /* 80-ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				99BA969F1AA436DA000F9591 /* 01-MonthView */,
 				99BA96971AA41EE4000F9591 /* 00-SplashScreen */,
+				99BA969F1AA436DA000F9591 /* 01-MonthView */,
+				990A18EF1AAC29C3002AEAA5 /* 02-MainView */,
 				99EC88021AA36EF800050AC6 /* ViewController.swift */,
 			);
 			path = "80-ViewControllers";
@@ -344,6 +402,7 @@
 				99EC87C51AA2090C00050AC6 /* Main.storyboard in Resources */,
 				99EC87CA1AA2090C00050AC6 /* LaunchScreen.xib in Resources */,
 				99EC87F31AA2239900050AC6 /* Basic.html in Resources */,
+				990A18F51AAC2B61002AEAA5 /* TodayView.xib in Resources */,
 				99BA96DC1AA479AF000F9591 /* TDCalendar.xib in Resources */,
 				99EC87FB1AA2D4B100050AC6 /* amlich_hnd_.js in Resources */,
 				99EC87C71AA2090C00050AC6 /* Images.xcassets in Resources */,
@@ -367,18 +426,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				99BA96E51AA47DEC000F9591 /* TDCalendarVC.swift in Sources */,
+				990A18F11AAC2A7E002AEAA5 /* MainView.swift in Sources */,
 				99EC88041AA36EF800050AC6 /* ViewController.swift in Sources */,
 				99EC88031AA36EF800050AC6 /* AppDelegate.swift in Sources */,
 				99EC87F71AA223FD00050AC6 /* JavaScriptUtils.swift in Sources */,
 				99BA969E1AA421E7000F9591 /* VCUtils.swift in Sources */,
+				990A18E51AAB5C52002AEAA5 /* TDDate.xcdatamodeld in Sources */,
 				99EC87FE1AA36A0800050AC6 /* WebViewSources.swift in Sources */,
+				990A18F31AAC2B02002AEAA5 /* TodayView.swift in Sources */,
 				9906913F1AA4C37E0069432B /* TDViewUtils.swift in Sources */,
 				990691431AA4D2D70069432B /* TDDateUtils.swift in Sources */,
 				99BA96DE1AA479BA000F9591 /* TDCalendar.swift in Sources */,
 				99EC87F91AA2241700050AC6 /* FileUtils.swift in Sources */,
 				99F94A2E1AA49BD600943E44 /* DateItemCollectionCell.swift in Sources */,
+				990A18E81AAB5EE9002AEAA5 /* TDCoreDataUtils.swift in Sources */,
 				99BA96991AA42033000F9591 /* TDSplashScreenVC.swift in Sources */,
 				99BA96A11AA43CDA000F9591 /* MonthVC.swift in Sources */,
+				990A18ED1AAB611B002AEAA5 /* TDGenerateDates.swift in Sources */,
 				99BA96E01AA47ADE000F9591 /* TDMonthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +654,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		990A18E31AAB5C52002AEAA5 /* TDDate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				990A18E41AAB5C52002AEAA5 /* TDDate.xcdatamodel */,
+			);
+			currentVersion = 990A18E41AAB5C52002AEAA5 /* TDDate.xcdatamodel */;
+			path = TDDate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 99EC87B21AA2090C00050AC6 /* Project object */;
 }

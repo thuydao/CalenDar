@@ -9,31 +9,43 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: TDCoreDataUtils, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    override func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         webviewSource.sharedInstance
+        
+        
+        //test
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            var temp = TDGenerateDates()
+            temp.getData()
+        }
+        
+        
+        
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
+    override func applicationWillResignActive(application: UIApplication) {
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    override func applicationDidEnterBackground(application: UIApplication) {
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    override func applicationWillEnterForeground(application: UIApplication) {
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    override func applicationDidBecomeActive(application: UIApplication) {
     }
 
-    func applicationWillTerminate(application: UIApplication) {
+    override func applicationWillTerminate(application: UIApplication)
+    {
+         self.saveContext()
     }
-
 
 }
 

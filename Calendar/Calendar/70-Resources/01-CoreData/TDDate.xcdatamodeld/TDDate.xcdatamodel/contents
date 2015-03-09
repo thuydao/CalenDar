@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="LunarDate" syncable="YES">
+        <attribute name="amlich" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duonglich" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="giodaungay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="giohoangdao" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tenngay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tiet" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TDDate" syncable="YES">
+        <attribute name="dateofMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="infoOfMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TDDate" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="LunarDate" positionX="-54" positionY="18" width="128" height="135"/>
+    </elements>
+</model>
