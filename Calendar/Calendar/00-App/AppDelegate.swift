@@ -15,15 +15,33 @@ class AppDelegate: TDCoreDataUtils, UIApplicationDelegate {
 
 
     override func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        webviewSource.sharedInstance
+        
+        let firstLaunch = NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")
+        if firstLaunch  {
+            println("Not first launch.")
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                NSNotificationCenter.defaultCenter().postNotificationName("NotificationGenerated", object: nil)
+            }
+        }
+        else {
+            println("First launch, setting NSUserDefault.")
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
+            webviewSource.sharedInstance
+        }
+        
+        
+        
         
         
         //test
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
-            var temp = TDGenerateDates()
-            temp.getData()
-        }
+        
+//        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(18 * Double(NSEC_PER_SEC)))
+//        dispatch_after(delayTime, dispatch_get_main_queue()) {
+//            var temp = TDGenerateDates()
+//            temp.startGenerate()
+//        }
+
         
         
         

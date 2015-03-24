@@ -20,18 +20,24 @@ class TDGenerateDates: NSObject
     var LunarDate = [NSManagedObject]()
     func startGenerate()
     {
-        let startDate : NSDate = NSDate.td_dateFromString(str_startDate, aFormat: format)
-        let endDate : NSDate = NSDate.td_dateFromString(str_endDate, aFormat: format)
-        
-        var tmpDate : NSDate = startDate
-        while (tmpDate.td_year() <= endDate.td_year())
-        {
-            tmpDate = tmpDate.td_dateByAddingDays(1);
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
             
-            var js = NSString(format: "td_getLunarDate(%.2d,%.2d,%d);", tmpDate.td_day(),tmpDate.td_month(), tmpDate.td_year())
+            let startDate : NSDate = NSDate.td_dateFromString(str_startDate, aFormat: format)
+            let endDate : NSDate = NSDate.td_dateFromString(str_endDate, aFormat: format)
             
-           var result =  webviewSource.sharedInstance.wvTest?.td_runJS(js)
-            self.saveDate(tmpDate, lunarInfor: result!)
+            var tmpDate : NSDate = startDate
+            while (tmpDate.td_year() <= endDate.td_year())
+            {
+                tmpDate = tmpDate.td_dateByAddingDays(1);
+                
+                var js = NSString(format: "td_getLunarDate(%.2d,%.2d,%d);", tmpDate.td_day(),tmpDate.td_month(), tmpDate.td_year())
+                
+                var result =  webviewSource.sharedInstance.wvTest?.td_runJS(js)
+                self.saveDate(tmpDate, lunarInfor: result!)
+            }
+            NSNotificationCenter.defaultCenter().postNotificationName("NotificationGenerated", object: nil)
+
         }
     }
     
@@ -78,8 +84,7 @@ class TDGenerateDates: NSObject
         let managedContext = appDelegate.managedObjectContext!
         
         //2
-        let fetchRequest = NSFetchRequest(entityName:"LunarDate")
-        
+        let fetchRequest = NSFetchRequest(entityName:"LunarDate" )
         //3
         var error: NSError?
         
@@ -95,6 +100,70 @@ class TDGenerateDates: NSObject
         }
 
     }
+    
+    func getData(dateString: String)
+    {
+        //1
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        //2
+        let fetchRequest = NSFetchRequest(entityName:"LunarDate" )
+        let predicate = NSPredicate(format: "duonglich == %@", dateString)
+        fetchRequest.predicate = predicate
+        //3
+        var error: NSError?
+        
+        let fetchedResults =
+        managedContext.executeFetchRequest(fetchRequest,
+            error: &error) as [NSManagedObject]?
+        
+        if let results = fetchedResults {
+            LunarDate = results
+            self.printlnTest()
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
+    }
+    
+    func getData(date: NSDate) -> NSManagedObject!
+    {
+        //1
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext!
+        
+        //2
+        let fetchRequest = NSFetchRequest(entityName:"LunarDate" )
+        let predicate = NSPredicate(format: "duonglich == %@", date.td_stringFromDate(format))
+        fetchRequest.predicate = predicate
+        //3
+        var error: NSError?
+        
+        let fetchedResults =
+        managedContext.executeFetchRequest(fetchRequest,
+            error: &error) as [NSManagedObject]?
+        
+        if let results = fetchedResults {
+            if results.count != 0 {
+            var entityObject = results[0]
+                return entityObject
+            }
+            else
+            {
+                self.startGenerate()
+                return self.getData(date)
+            }
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+             return nil;
+        }
+    }
+    
+    
     
     func printlnTest()
     {

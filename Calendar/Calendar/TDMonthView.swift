@@ -24,12 +24,16 @@ class TDMonthView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
         self.clvMonth.delegate = self
         self.clvMonth.dataSource = self
         
-        var nipName = UINib(nibName: "DateItemCollectionCell", bundle:nil)
+        var nibName = UINib(nibName: "DateItemCollectionCell", bundle:nil)
         
-        self.clvMonth.registerNib(nipName, forCellWithReuseIdentifier:"Cell")
+        self.clvMonth.registerNib(nibName, forCellWithReuseIdentifier:"Cell")
         self.clvMonth.scrollEnabled = false
         self .addSubview(self.clvMonth)
         self.clvMonth.backgroundColor = UIColor.whiteColor()
+        
+        //set frame
+        self.clvMonth.frame = self.frame
+        self.clvMonth.frame.origin.y = 0
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -107,24 +111,36 @@ class TDMonthView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
             {
                 cell.lbTitle.textColor = UIColor.grayColor()
             }
+            
+
+            if datetmp.td_stringFromDate("DD/MM/YYYY") == NSDate().td_stringFromDate("DD/MM/YYYY")
+            {
+                cell.lbTitle.textColor = UIColor.redColor()
+                cell.lbLunaTitle.textColor = UIColor.redColor()
+            }
+            else
+            {
+                cell.lbTitle.textColor = UIColor.blackColor()
+                cell.lbLunaTitle.textColor = UIColor.blackColor()
+            }
         }
         
         return cell
     }
+    
     // MARK: UICollectionViewDelegateFlowLayout
-
     func collectionView(collectionView: UICollectionView!,
         layout collectionViewLayout: UICollectionViewLayout!,
         sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
             let width = self.frame.size.width
             // fix height
             if indexPath.section == 0 {
-                return CGSize(width: (width - 45)/8, height: 35)
+                return CGSize(width: (width - 35)/8, height: 35)
             }
-            return CGSize(width: (width - 45)/8, height: 30)
+            return CGSize(width: (width - 35)/8, height: 30)
     }
 
-    private let sectionInsets = UIEdgeInsets(top: 5 , left: 5.0, bottom: 5.0, right: 0)
+    private let sectionInsets = UIEdgeInsets(top: 5 , left: 5.0, bottom: 0.0, right: 5)
     
     func collectionView(collectionView: UICollectionView!,
         layout collectionViewLayout: UICollectionViewLayout!,
@@ -133,7 +149,6 @@ class TDMonthView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     //MARK: Click To Item
-    
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
         if indexPath.section == 0 {

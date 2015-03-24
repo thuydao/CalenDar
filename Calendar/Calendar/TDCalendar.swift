@@ -30,7 +30,6 @@ class TDCalendar: UIView, UIScrollViewDelegate
     
     func setup()
     {
-        self.svCalendarsList.frame.size.height = 250
         self.svCalendarsList.pagingEnabled = true
         var n = 2 * KCOMPONENTS + 1
         
@@ -39,8 +38,10 @@ class TDCalendar: UIView, UIScrollViewDelegate
         var frame : CGRect = self.svCalendarsList.frame
         for var i = -1 * KCOMPONENTS; i <= KCOMPONENTS; i++ {
             var temp : TDMonthView = self.initTMonthView(currentDate.td_dateByAddingMonths(i))
-            frame = self.svCalendarsList.frame;
+            frame = self.frame;
+            
             frame.origin.x = self.svCalendarsList.frame.size.width * CGFloat(j)
+            frame.origin.y = 0
             temp.frame = frame
             arrItem.addObject(temp)
             j++
@@ -52,7 +53,7 @@ class TDCalendar: UIView, UIScrollViewDelegate
         self.svCalendarsList.showsHorizontalScrollIndicator = false
         self.svCalendarsList.showsVerticalScrollIndicator = false
         
-        self.scrollToCenter()
+        self.self.scrollToIndex(KCOMPONENTS)
     }
     
     func initTMonthView(date : NSDate) -> TDMonthView
@@ -71,12 +72,12 @@ class TDCalendar: UIView, UIScrollViewDelegate
         
         if (scrollView.contentOffset.x < 0)
         {
-            self.reloadDateALlItem()
+            self.reloadDateALlItem(KCOMPONENTS)
         }
             
         else if (index >= 2 * KCOMPONENTS)
         {
-            self.reloadDateALlItem()
+            self.reloadDateALlItem(KCOMPONENTS + 1)
         }
             
         else
@@ -85,6 +86,7 @@ class TDCalendar: UIView, UIScrollViewDelegate
             {
                 self.page = index
                 self.currentDate = (arrItem[index] as TDMonthView).currentDate
+                NSNotificationCenter.defaultCenter().postNotificationName("NotificationScrolling", object: nil)
             }
         }
     }
@@ -94,30 +96,30 @@ class TDCalendar: UIView, UIScrollViewDelegate
     }
     
     
-    func reloadDateALlItem()
+    func reloadDateALlItem(index: NSInteger)
     {
-        UIView.animateWithDuration(0.3, delay: 0.0, options: .TransitionFlipFromLeft, animations:
+        UIView.animateWithDuration(0.3, delay: 0.0, options: .TransitionNone, animations:
             {
                 var j = 0
                 for var i = -1 * KCOMPONENTS; i <= KCOMPONENTS; i++ {
                     var temp : TDMonthView = self.arrItem[j] as TDMonthView
-                    j++
                     temp.currentDate = self.currentDate.td_dateByAddingMonths(i)
                     temp .reload()
+                    j++
                 }
                 
             },
             completion: { finished in
-                self.scrollToCenter()
+                self.scrollToIndex(index)
         })
     }
     
-    func scrollToCenter()
+    func scrollToIndex(index: NSInteger)
     {
         var n = 2 * KCOMPONENTS + 1
         var frame : CGRect = self.svCalendarsList.frame
         self.page = n
-        frame.origin.x = self.svCalendarsList.frame.size.width * CGFloat(KCOMPONENTS)
+        frame.origin.x = self.svCalendarsList.frame.size.width * CGFloat(index)
         self.svCalendarsList.scrollRectToVisible(frame, animated: false)
     }
 }
